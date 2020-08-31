@@ -1,0 +1,20 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "example application for shaken-qr-reader",
+  "main": "src/index.js",
+  "author": "Yuji Ueki",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "shaken-qr-reader": "../"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  }
+}
