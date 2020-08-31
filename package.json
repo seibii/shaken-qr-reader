@@ -1,0 +1,19 @@
+{
+  "name": "shaken-qr-reader",
+  "version": "1.0.0",
+  "description": "QR code reader for Japanese automobile certification",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/seibii/shaken-qr-reader.git"
+  },
+  "author": "Yuji Ueki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seibii/shaken-qr-reader/issues"
+  },
+  "homepage": "https://github.com/seibii/shaken-qr-reader#readme"
+}
