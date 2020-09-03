@@ -1,0 +1,63 @@
+version: 2.1
+executors:
+  default:
+    docker:
+      - image: circleci/node:14.9.0
+commands:
+  yarn_install:
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+jobs:
+  build:
+    executor: default
+    steps:
+      - yarn_install
+      - run: yarn build
+  test:
+    executor: default
+    steps:
+      - yarn_install
+      - run: yarn test --coverage
+      - run: yarn codecov
+  lint:
+    executor: default
+    steps:
+      - yarn_install
+      - run: yarn lint
+  publish:
+    executor: default
+    steps:
+      - run: sudo npm i -g can-npm-publish
+      - yarn_install
+      - run: yarn build
+      - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+      - run:
+          command: |
+            if can-npm-publish; then
+                npm publish
+            else
+                echo "publish skipped"
+            fi
+workflows:
+  version: 2
+  publishflow:
+    jobs:
+      - build
+      - test
+      - publish:
+          requires:
+            - build
+            - test
+          filters:
+            branches:
+              only:
+                - master
