@@ -4,17 +4,17 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader'
+        use: 'ts-loader',
       },
     ],
   },
   resolve: {
-    extensions: [
-      '.ts', '.js',
-    ],
+    extensions: ['.ts'],
   },
   output: {
-    filename: 'main.js',
-    path: `${__dirname}/dist`
-  }
+    filename: 'index.js',
+    libraryTarget: 'umd',
+    libraryExport: "default",
+    library: "shaken-qr-reader",
+  },
 };
