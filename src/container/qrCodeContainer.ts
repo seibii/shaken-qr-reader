@@ -1,8 +1,10 @@
 import { QRCode } from 'jsqr'
 import QRCodeContainerBase from './qrCodeContainerBase'
-import Certificate from '../data/certificate'
-import KeiCertificate from '../data/keiCertificate'
+import Certificate from '../data/certificate/certificate'
+import KeiCertificate from '../data/certificate/keiCertificate'
 import { InvalidQRCode, ReadQRCode } from '../types'
+import Payload21 from "../data/payload/normal/payload21";
+import Payload22 from "../data/payload/normal/payload22";
 
 const firstQRIndexes = [1, 2, 3]
 const secondQRIndexes = [4, 5]
@@ -21,46 +23,32 @@ export default class QRCodeContainer implements QRCodeContainerBase {
 
     get result (): Certificate | KeiCertificate | null {
       if (this.isCompleted) {
-        const firstCodes = this.firstQRCodes
-          .sort((a, b) => a.structuredAppend.M - b.structuredAppend.M)
-          .map(qrCode => qrCode.data)
-          .join('')
-          .trim()
-          .split('/')
-          .filter((_, i) => i > 0)
-
-        const secondCodes = this.secondQRCodes
-          .sort((a, b) => a.structuredAppend.M - b.structuredAppend.M)
-          .map(qrCode => qrCode.data)
-          .join('')
-          .trim()
-          .split('/')
-          .filter((_, i) => i > 0)
-        const data = firstCodes.concat(secondCodes)
+        const firstQRCode = new Payload21(this.firstQRCodes)
+        const secondQRCode = new Payload22(this.secondQRCodes)
 
         return new Certificate(
-          data[0],
-          data[1],
-          data[2],
-          data[3],
-          data[4],
-          data[5],
-          data[6],
-          data[7],
-          data[8],
-          data[9],
-          data[10],
-          data[11],
-          data[12],
-          data[13],
-          data[14],
-          data[15],
-          data[17],
-          data[18],
-          data[19],
-          data[20],
-          data[21],
-          data[22]
+          firstQRCode.carIdentifierLocation,
+          firstQRCode.carTypeNumberAndCategoryNumber,
+          firstQRCode.expiresAt,
+          firstQRCode.registeredAt,
+          firstQRCode.model,
+          firstQRCode.frontFrontAxleWeight,
+          firstQRCode.frontRearAxleWeight,
+          firstQRCode.rearFrontAxleWeight,
+          firstQRCode.rearRearAxleWeight,
+          firstQRCode.noiseRegulation,
+          firstQRCode.emissionNoiseRegulation,
+          firstQRCode.driveSystem,
+          firstQRCode.measuredOpacimeter,
+          firstQRCode.measuredNoxAndPm,
+          firstQRCode.nox,
+          firstQRCode.pm,
+          firstQRCode.fuelType,
+          secondQRCode.number,
+          secondQRCode.numberType,
+          secondQRCode.identifier,
+          secondQRCode.engineModel,
+          secondQRCode.sheetType
         )
       }
 
