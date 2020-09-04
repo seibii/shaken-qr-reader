@@ -1,4 +1,4 @@
-import Certificate from "../../src/data/certificate";
+import Certificate from "../../../../src/data/certificate/certificate";
 
 describe("Certificate", () => {
    describe(".encodedStrings", () => {
