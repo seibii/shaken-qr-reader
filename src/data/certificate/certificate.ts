@@ -2,7 +2,6 @@ import BaseCertificate from './baseCertificate'
 
 export default class Certificate implements BaseCertificate {
   constructor (
-        // Base
         public carIdentifierLocation: string,
         public carTypeNumberAndCategoryNumber: string,
         public expiresAt: string,
