@@ -8,13 +8,17 @@
 `shaken-qr-reader` is a library to read/parse Japanese `車検証` QR code 
 
 ### Installation
+#### NPM
 
 ```
 npm install shaken-qr-reader --save
 ```
 ```
-yarn add shaken-qr-reade 
+yarn add shaken-qr-reader
 ```
+
+#### Browser
+You can find the script URL from https://www.jsdelivr.com/package/npm/shaken-qr-reader
 
 ### Usage
 
