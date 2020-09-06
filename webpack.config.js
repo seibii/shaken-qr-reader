@@ -13,8 +13,8 @@ module.exports = {
   },
   output: {
     filename: 'index.js',
+    library: "ShakenQRReader",
     libraryTarget: 'umd',
-    libraryExport: "default",
-    library: "shaken-qr-reader",
+    libraryExport: "default"
   },
 };
