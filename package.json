@@ -1,6 +1,6 @@
 {
   "name": "shaken-qr-reader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "QR code reader for Japanese automobile certification",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
