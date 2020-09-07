@@ -5,6 +5,7 @@ import {CarType} from "./types";
 import QRCodeContainerBase from "./container/qrCodeContainerBase";
 import QRCodeContainer from "./container/qrCodeContainer";
 import QRCodeContainerKei from "./container/qrCodeContainerKei";
+import QRCodeContainerKeiOld from "./container/qrCodeContainerKeiOld";
 
 export default class ShakenQRReader {
     private qrCodeContainer: QRCodeContainerBase
@@ -22,10 +23,12 @@ export default class ShakenQRReader {
     }
 
     constructor(private carType: CarType = 'normal') {
-        if (carType === 'normal') {
-            this.qrCodeContainer = new QRCodeContainer();
-        } else {
+        if (carType === 'kei_old') {
+            this.qrCodeContainer = new QRCodeContainerKeiOld();
+        } else if (carType === 'kei') {
             this.qrCodeContainer = new QRCodeContainerKei();
+        } else {
+            this.qrCodeContainer = new QRCodeContainer();
         }
     }
 
