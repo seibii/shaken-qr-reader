@@ -24,7 +24,9 @@ You can find the script URL from https://www.jsdelivr.com/package/npm/shaken-qr-
 
 ```typescript
 const images = ... // common ImageData type objects. You can get from cameras or uploaded files etc...
-const reader = new ShakenQRReader(); // or new ShakenQRReader('kei'); for 軽自動車
+const reader = new ShakenQRReader(); 
+// const reader = new ShakenQRReader('kei'); for 軽自動車 has 6 QR codes
+// const reader = new ShakenQRReader('kei_old'); for 軽自動車 has 3 QR codes
 
 images.forEach((image) => {
     try {
