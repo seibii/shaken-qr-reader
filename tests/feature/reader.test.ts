@@ -77,4 +77,35 @@ describe('ShakenQRReader', () => {
             ]);
         });
     });
+
+    describe('when input is old kei certificate', () => {
+        const qrCodes = [
+            "tests/resources/kei_old/1.png",
+            "tests/resources/kei_old/2.png"
+        ].map(readPNGImage);
+
+        it('should return missing index', () => {
+            const reader = new ShakenQRReader('kei_old');
+
+            reader.push(qrCodes[0]);
+            expect(reader.missingIndex).toEqual([2]);
+        });
+
+        it('should be completed', () => {
+            const reader = new ShakenQRReader('kei_old');
+            qrCodes.forEach(reader.push);
+
+            expect(reader.isCompleted).toBeTruthy();
+        });
+
+        it('should return encoded strings', () => {
+            const reader = new ShakenQRReader('kei_old');
+            qrCodes.forEach(reader.push);
+
+            expect(reader.result.encodedStrings).toEqual([
+                "K/31/-  /11001100/220415/0212/DBA-JF3/0044/-/-/0042/- /-  /-/-/-/-   /-    /999999",
+                "K/22/品川　　７７７あ　　７７/1/DBA-JF3-000000/S07B/1"
+            ]);
+        });
+    });
 });
