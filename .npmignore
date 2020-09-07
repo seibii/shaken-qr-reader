@@ -1,3 +1,5 @@
+src/
+tests/
 .git/
 
 # for WebStorm
@@ -23,7 +25,7 @@ test-typings/
 example/
 .gitignore
 .editorconfig
-circle.yml
+.circleci/
 setup.sh
 tslint.json
 
