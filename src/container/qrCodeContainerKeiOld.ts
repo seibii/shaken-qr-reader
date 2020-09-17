@@ -44,7 +44,7 @@ export default class QRCodeContainerKeiOld implements QRCodeContainerBase {
                 payload31.measuredNoxAndPm,
                 payload31.nox,
                 payload31.pm,
-                '',
+                '01',
                 payload22.number,
                 payload22.numberType,
                 payload22.identifier,
