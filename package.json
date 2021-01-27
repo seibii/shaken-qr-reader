@@ -1,9 +1,9 @@
 {
   "name": "shaken-qr-reader",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "QR code reader for Japanese automobile certification",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/seibii/shaken-qr-reader.git"
