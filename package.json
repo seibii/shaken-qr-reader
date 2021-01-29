@@ -2,8 +2,8 @@
   "name": "shaken-qr-reader",
   "version": "1.1.2",
   "description": "QR code reader for Japanese automobile certification",
-  "main": "dist/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/seibii/shaken-qr-reader.git"
@@ -41,7 +41,7 @@
     "jsqr": "seibii/jsQR#09fabd"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack && tsc -p ./tsconfig.json",
     "watch": "webpack -w",
     "test": "jest",
     "lint": "eslint src/**/*.ts"
