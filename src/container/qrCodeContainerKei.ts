@@ -1,13 +1,13 @@
-import {QRCode} from 'jsqr'
+import { QRCode } from 'jsqr'
 import QRCodeContainerBase from './qrCodeContainerBase'
 import KeiCertificate from '../data/certificate/keiCertificate'
 import Certificate from '../data/certificate/certificate'
-import {InvalidQRCode, ReadQRCode} from '../types'
-import Payload22 from "../data/payload/kei/payload22";
-import Payload31 from "../data/payload/kei/payload31";
-import Payload51 from "../data/payload/kei/payload51";
-import Payload61 from "../data/payload/kei/payload61";
-import Payload71 from "../data/payload/kei/payload71";
+import { InvalidQRCode, ReadQRCode } from '../types'
+import Payload22 from '../data/payload/kei/payload22'
+import Payload31 from '../data/payload/kei/payload31'
+import Payload51 from '../data/payload/kei/payload51'
+import Payload61 from '../data/payload/kei/payload61'
+import Payload71 from '../data/payload/kei/payload71'
 
 const qrTypeVersions = ['71', '61', '51', '31', '22']
 
