@@ -3,8 +3,8 @@ import QRCodeContainerBase from './qrCodeContainerBase'
 import Certificate from '../data/certificate/certificate'
 import KeiCertificate from '../data/certificate/keiCertificate'
 import { InvalidQRCode, ReadQRCode } from '../types'
-import Payload21 from "../data/payload/normal/payload21";
-import Payload22 from "../data/payload/normal/payload22";
+import Payload21 from '../data/payload/normal/payload21'
+import Payload22 from '../data/payload/normal/payload22'
 
 const firstQRIndexes = [1, 2, 3]
 const secondQRIndexes = [4, 5]
