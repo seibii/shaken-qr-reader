@@ -624,12 +624,12 @@
     eslint-utils "^3.0.0"
 
 "@typescript-eslint/parser@^4.0.1":
-  version "4.26.0"
-  resolved "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-4.26.0.tgz"
+  version "4.28.1"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.28.1.tgz#5181b81658414f47291452c15bf6cd44a32f85bd"
   dependencies:
-    "@typescript-eslint/scope-manager" "4.26.0"
-    "@typescript-eslint/types" "4.26.0"
-    "@typescript-eslint/typescript-estree" "4.26.0"
+    "@typescript-eslint/scope-manager" "4.28.1"
+    "@typescript-eslint/types" "4.28.1"
+    "@typescript-eslint/typescript-estree" "4.28.1"
     debug "^4.3.1"
 
 "@typescript-eslint/scope-manager@4.26.0":
