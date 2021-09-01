@@ -2,7 +2,7 @@ version: 2.1
 executors:
   default:
     docker:
-      - image: circleci/node:14.9.0
+      - image: circleci/node:15.4.0
 commands:
   yarn_install:
     steps:
