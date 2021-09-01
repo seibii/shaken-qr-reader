@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/seibii/shaken-qr-reader#readme",
   "devDependencies": {
-    "@types/jest": "^26.0.13",
+    "@types/jest": "^27.0.1",
     "@types/node": "^16.4.9",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
