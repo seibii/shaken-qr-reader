@@ -601,8 +601,8 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
 
 "@types/node@*", "@types/node@^17.0.5":
-  version "17.0.21"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.21.tgz#864b987c0c68d07b4345845c3e63b75edd143644"
+  version "17.0.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.23.tgz#3b41a6e643589ac6442bdbd7a4a3ded62f33f7da"
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
