@@ -8,9 +8,11 @@ updates:
     timezone: Asia/Tokyo
   open-pull-requests-limit: 20
   reviewers:
-  - avexbesuke
   - amatotsuji
-  - yuta-sanada0089
+  - aya-vii
+  - lakesizebyter
+  - arizuk
+  - tadak1
   ignore:
   - dependency-name: webpack
     versions:
