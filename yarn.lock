@@ -4222,8 +4222,8 @@ ts-jest@^26.3.0:
     yargs-parser "20.x"
 
 ts-loader@^9.0.0:
-  version "9.3.0"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-9.3.0.tgz#980f4dbfb60e517179e15e10ed98e454b132159f"
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-9.3.1.tgz#fe25cca56e3e71c1087fe48dc67f4df8c59b22d4"
   dependencies:
     chalk "^4.1.0"
     enhanced-resolve "^5.0.0"
