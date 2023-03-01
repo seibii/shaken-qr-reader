@@ -29,7 +29,7 @@
     "jest": "^26.4.2",
     "jpeg-js": "^0.4.2",
     "object-assign": "^4.1.1",
-    "pngjs": "^6.0.0",
+    "pngjs": "^7.0.0",
     "ts-jest": "^26.3.0",
     "ts-loader": "^9.0.0",
     "ts-node": "^10.0.0",
